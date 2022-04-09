@@ -1,6 +1,30 @@
 # Core Azure Services
 ## Contents Page
-
+  - [Azure Compute Services](#azure-compute-services)
+    - [Overview](#overview)
+    - [When to use Azure Virtual Machines](#when-to-use-azure-virtual-machines)
+    - [When to use Azure App Service](#when-to-use-azure-app-service)
+    - [When to use Azure Containers Instances or Azure Kubernetes Service](#when-to-use-azure-containers-instances-or-azure-kubernetes-service)
+    - [When to use Azure Functions](#when-to-use-azure-functions)
+    - [When to use Azure Virtual Desktop](#when-to-use-azure-virtual-desktop)
+  - [Azure Networking Services](#azure-networking-services)
+    - [Virtual Network Fundamentals](#virtual-network-fundamentals)
+    - [Virtual Network Settings](#virtual-network-settings)
+    - [VPN Gateway Fundamentals](#vpn-gateway-fundamentals)
+    - [ExpressRoute Fundamentals](#expressroute-fundamentals)
+  - [Azure Storage Services](#azure-storage-services)
+    - [Azure Storage Fundamentals](#azure-storage-fundamentals)
+    - [Disk Storage Fundamentals](#disk-storage-fundamentals)
+    - [Azure Blob Storage Fundamentals](#azure-blob-storage-fundamentals)
+    - [Azure Files Fundamentals](#azure-files-fundamentals)
+    - [Blob Access Tiers](#blob-access-tiers)
+  - [Azure Database and Analytics Services](#azure-database-and-analytics-services)
+    - [Azure Cosmos DB](#azure-cosmos-db)
+    - [Azure SQL Database](#azure-sql-database)
+    - [Azure Database for MySQL](#azure-database-for-mysql)
+    - [Azure Database for PostgreSQL](#azure-database-for-postgresql)
+    - [Azure SQL Managed Instance](#azure-sql-managed-instance)
+    - [Big Data and Analytics](#big-data-and-analytics)
 ## Azure Compute Services
 ### Overview
 - Azure compute is an on-demand computing service for running cloud-based applications
