@@ -53,3 +53,11 @@
 - Although the underlying hardware is shared, your VM workloads are isolated from workloads that other Azure customers run
 - Azure Dedicated Host provides dedicated physical servers to host your Azure VMs for Windows and Linux
 - You're charged per dedicated host, independent of how many VMs you deploy to it
+
+## Secure Network Connectivity on Azure
+### Defense in Depth
+- The objective of defense-in-depth is to protect information and prevent it from being stolen by those who aren't authorized to access it
+- A defense-in-depth strategy uses a series of mechanisms to slow the advance of an attack that aims at acquiring unauthorized access to data
+
+![Defence in Depth](img/Defence-in-depth.png)
+- 
