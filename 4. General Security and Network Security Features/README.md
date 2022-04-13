@@ -147,4 +147,13 @@ https://docs.microsoft.com/en-us/learn/azure-fundamentals/secure-network-connect
   - Protocol Attacks: render a target inaccessible by exploiting a weakness in the layer 3 and layer 4 protocol stack
   - Resource-layer Attacks: target web application packets to disrupt the transmission of data between hosts
 ### Network Security Groups
-- 
+- A network security group enables you to filter network traffic to and from Azure resources within an Azure virtual network
+- NSGs can contain multiple inbound and outbound security rules that enable you to filter traffic to and from resources by source and destination IP address, port, and protocol
+- A network security group can contain as many rules as you need, each rule specifies these properties:
+  - Name: a unique name for the NSG
+  - Priority: a number between 100 and 4096. Rules are processed in priority order, with lower numbers processed before higher numbers
+  - Source/Destination:
+  - Protocol:
+  - Direction:
+  - Port Range:
+  - Action:
