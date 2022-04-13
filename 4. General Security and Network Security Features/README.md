@@ -113,7 +113,7 @@
 - You can create firewall rules that specify ranges of IP addresses
 - Azure Firewall is a managed, cloud-based network security service that helps protect resources in your Azure virtual networks
 
-https://docs.microsoft.com/en-us/learn/azure-fundamentals/secure-network-connectivity-azure/media/3-firewall-overview.png
+![Firewall](img/Firewall.png)
 - Azure Firewall is a stateful firewall. A stateful firewall analyzes the complete context of a network connection, not just an individual packet of network traffic
 - Azure Firewall provides a central location to create, enforce, and log application and network connectivity policies across subscriptions and VNets
 - Azure Firewall uses a static public IP address for your VNet resources, which enables outside firewalls to identify traffic coming from your VNet
@@ -136,7 +136,7 @@ https://docs.microsoft.com/en-us/learn/azure-fundamentals/secure-network-connect
 - Azure DDoS Protection (Standard) helps protect your Azure resources from DDoS attacks
 - DDoS Protection service helps protect your applications by analyzing and discarding DDoS traffic at the Azure network edge, before it can affect your service
 
-https://docs.microsoft.com/en-us/learn/azure-fundamentals/secure-network-connectivity-azure/media/4-distributed-denial-service.png
+![DDoS](img/DDoS.png)
 - A cleverly designed DDoS attack can cause you to increase your resource allocation, which incurs unneeded expense
 - DDoS Protection Standard helps ensure that the network load you process reflects customer usage (credit for any unneeded expense from DDoS)
 - DDoS Protection provides these service tiers:
@@ -152,8 +152,36 @@ https://docs.microsoft.com/en-us/learn/azure-fundamentals/secure-network-connect
 - A network security group can contain as many rules as you need, each rule specifies these properties:
   - Name: a unique name for the NSG
   - Priority: a number between 100 and 4096. Rules are processed in priority order, with lower numbers processed before higher numbers
-  - Source/Destination:
-  - Protocol:
-  - Direction:
-  - Port Range:
-  - Action:
+  - Source/Destination: a single IP address or IP address range, service tag, or application security group
+  - Protocol: TCP, UDP, or Any
+  - Direction: whether the rule applies to inbound or outbound traffic
+  - Port Range: a single port or range of ports
+  - Action: allow or deny
+- When you create a network security group, Azure creates a series of default rules to provide a baseline level of security
+- You can't remove the default rules, but you can override them by creating new rules with higher priorities
+### Combine Azure Services
+- Perimeter Layer: is about protecting your organization's resources from network-based attacks
+- Identifying these attacks, alerting the appropriate security teams, and eliminating their impact are important to keeping your network secure
+- To do this:
+  - Use Azure DDoS Protection to filter large-scale attacks before they can cause a denial of service for users
+  - Use perimeter firewalls with Azure Firewall to identify and alert on malicious attacks against your network
+- Network Layer: the focus is on limiting network connectivity across all of your resources to allow only what's required
+- Segment your resources and use network-level controls to restrict communication to only what's needed
+- Use network security groups to create rules that define allowed inbound and outbound communication at this layer
+- Here are some recommended practices:
+  - Limit communication between resources by segmenting your network and configuring access controls
+  - Deny by default
+  - Restrict inbound internet access and limit outbound where appropriate
+  - Implement secure connectivity to on-premises networks
+- Network Security Groups and Azure Firewall:
+  - Azure Firewall complements the functionality of network security groups. Together, they provide better defense-in-depth network security
+  - NSGs provide distributed network-layer traffic filtering to limit traffic to resources within virtual networks in each subscription
+  - Azure Firewall is a fully stateful, centralized network firewall as a service
+  - It provides network-level and application-level protection across different subscriptions and virtual networks
+- Azure Application Gateway and Azure Firewall:
+  - WAF is a feature of Azure Application Gateway that provides your web applications with centralized, inbound protection against common exploits and vulnerabilities
+  - Azure Firewall provides:
+    - Inbound protection for non-HTTP/S protocols (for example, RDP, SSH, and FTP)
+    - Outbound network-level protection for all ports and protocols
+    - Application-level protection for outbound HTTP/S
+  - Combining them provides more layers of protection
